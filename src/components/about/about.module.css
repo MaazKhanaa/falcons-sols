@@ -1,0 +1,15 @@
+img {
+  width: 100%;
+  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.aboutIcon {
+  color: var(--primary-color);
+}
+.aboutPointText {
+  font-family: var(--secondary-font);
+  font-size: 18px;
+  font-weight: 600;
+}

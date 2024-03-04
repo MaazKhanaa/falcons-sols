@@ -1,0 +1,28 @@
+.mobileMenu {
+  width: 80%; /* Adjust the width as needed */
+  height: 100%;
+  background: var(--global-background);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.mobileMenu ul {
+  padding: 0px;
+}
+.mobileMenu ul li {
+  list-style: none;
+  padding: 5px 0px;
+}
+.mobileMenu ul li a {
+  text-transform: uppercase;
+  padding: 0.5rem 0.7rem 0.5rem 0;
+  font-size: 13px;
+  color: var(--primary-black);
+  margin: 4px 4px 4px 0px;
+  font-family: var(--secondary-font);
+  text-decoration: none;
+  transition: 0.4s;
+}
+.mobileMenu ul li a:hover {
+  color: var(--primary-color);
+}

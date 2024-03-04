@@ -1,0 +1,12 @@
+.contactCard {
+  background: var(--global-background);
+  box-shadow: var(--global-shadow);
+  padding: 30px;
+  border-radius: 10px;
+}
+.contactCard img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+}

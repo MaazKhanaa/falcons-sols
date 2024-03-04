@@ -1,0 +1,15 @@
+.mainHeading {
+  font-size: 60px;
+  font-weight: 700;
+  font-family: var(--secondary-font);
+  line-height: 62px;
+  margin-bottom: 22px;
+  text-transform: capitalize;
+}
+
+@media screen and (max-width: 575.98px) {
+  .mainHeading {
+    font-size: 35px;
+    line-height: 40px;
+  }
+}

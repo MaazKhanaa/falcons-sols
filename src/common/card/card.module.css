@@ -1,0 +1,10 @@
+.cardOuter {
+  height: 100%;
+}
+.mainCard {
+  background: var(--global-background);
+  box-shadow: var(--global-shadow);
+  padding: 30px;
+  border-radius: 20px;
+  height: 100%;
+}

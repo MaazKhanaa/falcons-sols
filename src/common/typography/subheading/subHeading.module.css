@@ -1,0 +1,9 @@
+.subHeading {
+  font-size: 14px;
+  font-family: var(--secondary-font);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: var(--primary-color) !important;
+}

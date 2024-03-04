@@ -1,0 +1,65 @@
+.manuMain {
+  position: sticky;
+  top: 0;
+  background-color: var(--primary-white);
+  z-index: 1;
+}
+.navbar ul {
+  padding: 0px;
+  display: flex;
+}
+.navbar ul li {
+  list-style: none;
+}
+.navbar ul li a {
+  text-transform: uppercase;
+  padding: 0.5rem 0.7rem;
+  font-size: 13px;
+  color: var(--primary-black);
+  margin: 4px;
+  font-family: var(--secondary-font);
+  text-decoration: none;
+  transition: 0.4s;
+}
+.navbar ul li a:hover {
+  color: var(--primary-color);
+}
+.menuOverlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  transition: left 0.3s ease;
+}
+.open {
+  left: 0;
+}
+.menuBtn {
+  top: 20px;
+  right: 20px;
+  background: var(--global-background);
+  box-shadow: var(--global-shadow);
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+@media screen and (max-width: 1050px) {
+  .navIcon {
+    display: block;
+  }
+  .webMenu {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1051px) {
+  .navIcon {
+    display: none;
+  }
+  .webMenu {
+    display: flex !important;
+  }
+}
