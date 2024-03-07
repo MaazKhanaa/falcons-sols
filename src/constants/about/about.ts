@@ -3,28 +3,28 @@ import aboutMainImage from '../../assets/about.webp';
 export const aboutText = {
     subHeading: 'About us',
     mainHeading: "About",
-    aboutInnerSub: 'We can do',
+    aboutInnerSub: 'we offer the following services',
     image: aboutMainImage,
-    aboutParagraph: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+    aboutParagraph: "At falcon Solutions, we believe that a unique brand requires unique branding. Together we design and create strategies that empower brands around the world to grow and furnish their businesses with our keen help and support. Falcon sols is a marketing website with an extremely cooperative team having a vision of client satisfaction as their priority. We understand that the success of any business lies in its customers.Our team is available for free consultation around the clock.Contact us today to reach your business goals."
 }
 
 export const aboutPoints = [
     {
-        text: "App Development"
+        text: "Social Media Marketing"
     },
     {
-        text: "Mobile App"
-    },
-    {
-        text: "Designing"
-    },
-    {
-        text: "Business Strategy"
+        text: "UI consultation"
     },
     {
         text: "SEO"
     },
     {
-        text: "UI Construction"
+        text: "Graphic Designing"
+    },
+    {
+        text: "Business strategy"
+    },
+    {
+        text: "App development"
     }
 ];

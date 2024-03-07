@@ -6,15 +6,15 @@ import styles from './contact.module.css';
 const ContactCard = () => {
   const socialLinks = [
     {
-      url: 'https://www.facebook.com/',
+      url: 'https://www.facebook.com/falconsols?mibextid=LQQJ4d',
       icon: 'facebook',
     },
     {
-      url: 'https://www.twitter.com/',
+      url: 'https://www.linkedin.com/company/falconsolution/',
       icon: 'twitter',
     },
     {
-      url: 'https://www.instagram.com/',
+      url: 'https://www.instagram.com/falconsols?igsh=YzNlcGl3Zmt4NTZ5',
       icon: 'insta',
     },
   ];
@@ -24,6 +24,7 @@ const ContactCard = () => {
       <h4 className="mb-3">{contactData.ownerName}</h4>
       <p className="falconParagraph mb-3">{contactData.position}</p>
       <p className="falconParagraph mb-3">{contactData.detail}</p>
+      <p className="falconParagraph mb-3">{contactData.detail1}</p>
       <p className="falconParagraph mb-0">Phone: {contactData.phoneNumber}</p>
       <p className="falconParagraph mb-0">Email: {contactData.email}</p>
 

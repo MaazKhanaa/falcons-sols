@@ -11,6 +11,7 @@ import style from './mobileMenu.module.css';
 const Header = () => {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [isInstalled, setIsInstalled] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
 
   // mobile menu js
   const [showSection, setShowSection] = useState(false);
@@ -52,24 +53,24 @@ const Header = () => {
     };
   }, []);
 
-  const handleInstallClick = () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-    }
-  };
+  useEffect(() => {
+    setIsIOS(/iPhone|iPad|iPod/.test(navigator.userAgent));
+  }, []);
+
   const handleScroll = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
   return (
     <>
       {showSection && (
-        <div
-          className={`${styles.menuOverlay} ${showSection ? styles.open : ''}`}>
-          <div
-            className={`${style.mobileMenu} d-flex flex-column justify-content-between p-4 position-relative`}>
+        // Mobile menu overlay
+        <div className={`${styles.menuOverlay} ${showSection ? styles.open : ''}`}>
+          {/* Mobile menu content */}
+          <div className={`${style.mobileMenu} d-flex flex-column justify-content-between p-4 position-relative`}>
             <button
               className={`${styles.menuBtn} d-flex justify-content-center align-items-center border-0 rounded-circle position-absolute`}
               onClick={closeMobileMenu}>
@@ -80,14 +81,13 @@ const Header = () => {
                 <img
                   src={HeaderMainlogo.headerMainLogo}
                   style={{ width: '80px', height: 'auto' }}
+                  alt="Header Logo"
                 />
               </div>
               <ul className='mb-0'>
                 {MenuData.map((item, index) => (
                   <li key={index}>
-                    <a
-                      href={item.href}
-                      onClick={() => handleScroll(item.href.slice(1))}>
+                    <a href={item.href} onClick={() => handleScroll(item.href.slice(1))}>
                       {item.text}
                     </a>
                   </li>
@@ -101,13 +101,14 @@ const Header = () => {
         </div>
       )}
 
+      {/* Main header */}
       <div className={`${styles.manuMain} px-sm-5 px-4 border-bottom`}>
-        <nav
-          className={`${styles.navbar} d-flex align-items-center justify-content-between py-3`}>
+        <nav className={`${styles.navbar} d-flex align-items-center justify-content-between py-3`}>
           <div>
             <img
               src={HeaderMainlogo.headerMainLogo}
               style={{ width: '110px', height: 'auto' }}
+              alt="Header Logo"
             />
           </div>
           <div className={styles.navIcon}>
@@ -121,9 +122,7 @@ const Header = () => {
             <ul className='mb-0'>
               {MenuData.map((item, index) => (
                 <li key={index}>
-                  <a
-                    href={item.href}
-                    onClick={() => handleScroll(item.href.slice(1))}>
+                  <a href={item.href} onClick={() => handleScroll(item.href.slice(1))}>
                     {item.text}
                   </a>
                 </li>
@@ -134,7 +133,15 @@ const Header = () => {
             </div>
           </div>
         </nav>
-        {!isInstalled && <InstallButton handleClick={handleInstallClick} />}
+
+        {!isInstalled && !isIOS && deferredPrompt && (
+          <InstallButton handleClick={() => deferredPrompt.prompt()} />
+        )}
+        {!isInstalled && isIOS && (
+          <InstallButton
+            handleClick={() => alert("To install this app on iOS, tap the Share icon and select 'Add to Home Screen'.")}
+          />
+        )}
       </div>
     </>
   );

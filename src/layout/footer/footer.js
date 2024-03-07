@@ -12,15 +12,15 @@ import FooterLast from './footerLast';
 const Footer = () => {
   const socialLinks = [
     {
-      url: 'https://www.facebook.com/',
+      url: 'https://www.facebook.com/falconsols?mibextid=LQQJ4d',
       icon: 'facebook',
     },
     {
-      url: 'https://www.twitter.com/',
+      url: 'https://www.linkedin.com/company/falconsolution/',
       icon: 'twitter',
     },
     {
-      url: 'https://www.instagram.com/',
+      url: 'https://www.instagram.com/falconsols?igsh=YzNlcGl3Zmt4NTZ5',
       icon: 'insta',
     },
   ];
