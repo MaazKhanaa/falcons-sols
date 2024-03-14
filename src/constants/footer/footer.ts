@@ -4,7 +4,7 @@ export const FooterText = {
     header1: "Quick Links",
     header2: "Resources",
     header3: "Developers",
-    footerLast: " 2023 All Rights Reserved By Falcons Solution"
+    footerLast: "Rights reserved by Falcon sols 2024"
 }
 
 export const FooterLink1 = [
