@@ -1,6 +1,9 @@
-img {
+.projectImg {
   width: 100%;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
   height: 230px;
   object-fit: cover;
 }

@@ -9,12 +9,6 @@ export const MenuData = [{
 }, {
     text: "PortFolio", href: "#portfolio"
 }, {
-    text: "Testimonial", href: "#testimonial"
-}, {
-    text: "Clients", href: "#clients"
-}, {
-    text: "Pricing", href: "#pricing"
-}, {
     text: "Blog", href: "#blog"
 }, {
     text: "Contact", href: "#contact"
