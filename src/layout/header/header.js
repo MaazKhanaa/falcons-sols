@@ -78,11 +78,13 @@ const Header = () => {
             </button>
             <div>
               <div className='mb-4'>
+                <a href='/'>
                 <img
                   src={HeaderMainlogo.headerMainLogo}
                   style={{ width: '80px', height: 'auto' }}
                   alt="Header Logo"
                 />
+                </a>
               </div>
               <ul className='mb-0'>
                 {MenuData.map((item, index) => (
@@ -105,11 +107,13 @@ const Header = () => {
       <div className={`${styles.manuMain} px-sm-5 px-4 border-bottom`}>
         <nav className={`${styles.navbar} d-flex align-items-center justify-content-between py-3`}>
           <div>
+            <a href='/'>
             <img
               src={HeaderMainlogo.headerMainLogo}
               style={{ width: '110px', height: 'auto' }}
               alt="Header Logo"
             />
+            </a>
           </div>
           <div className={styles.navIcon}>
             <button

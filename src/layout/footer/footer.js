@@ -8,6 +8,8 @@ import {
   footerLogo,
 } from '../../constants/footer/footer.ts';
 import FooterLast from './footerLast';
+import WhatsAppChat from '../../components/whatsapp/whatsappButton.js';
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   const socialLinks = [
@@ -27,14 +29,19 @@ const Footer = () => {
   return (
     <div className="container">
       <div className="row">
-        <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div className="col-lg-4 col-md-5 col-sm-6 mb-4">
           <h3 className="mb-4">
             <img
               src={footerLogo.footerMainLogo}
-              style={{ width: '120px', height: 'auto' }}
+              style={{ width: '120px', height: 'auto' }} alt='footer img'
             />
           </h3>
-          <SocialIcon links={socialLinks} />
+          <div className='d-flex'>
+              <SocialIcon links={socialLinks} />
+              <WhatsAppChat phoneNumber="+923149231923">
+                <FaWhatsapp />
+              </WhatsAppChat>
+              </div>
         </div>
         <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
           <h6 className={styles.footerHeading}>{FooterText.header1}</h6>
@@ -56,7 +63,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="col-lg-3 col-md-4 col-sm-6 mb-4">
+        <div className="col-lg-2 col-md-3 col-sm-6 mb-4">
           <h6 className={styles.footerHeading}>{FooterText.header3}</h6>
           <div>
             {FooterLink3.map((item, index) => (

@@ -10,3 +10,8 @@
   object-fit: cover;
   border-radius: 10px;
 }
+
+.emailLink {
+  color: var(--primary-color) !important;
+  text-decoration: none !important;
+}

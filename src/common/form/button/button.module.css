@@ -9,4 +9,10 @@
   border: 0;
   text-transform: uppercase;
   font-weight: 500;
+  transition: .4s;
+}
+
+.primaryBtn:hover {
+  background: var(--primary-color) !important;
+  color: white !important;
 }

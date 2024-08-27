@@ -5,7 +5,7 @@ const socialIcon = ({ links }) => {
   return (
     <div className={`${styles.socialIcon}`}>
       {links.map((link, index) => (
-        <a key={index} href={link.url} target="_blank">
+        <a key={index} href={link.url} target="_blank" rel="noreferrer">
           {link.icon === 'facebook' && <FaFacebookF />}
           {link.icon === 'twitter' && <FaLinkedinIn />}
           {link.icon === 'insta' && <FaInstagram />}

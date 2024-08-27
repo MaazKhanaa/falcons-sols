@@ -4,6 +4,8 @@ import SocialIcon from '../../common/social/socialIcon';
 import styles from './banner.module.css';
 import { bannerData } from '../../constants/banner/banner.ts';
 import bannerImg from '../../assets/banner.png';
+import WhatsAppChat from '../whatsapp/whatsappButton.js';
+import { FaWhatsapp } from "react-icons/fa";
 
 const Banner = (id) => {
   const socialLinks = [
@@ -31,11 +33,16 @@ const Banner = (id) => {
 
             <div className={styles.SocialMain}>
               <SubHeading text='Find with me' isFirstSection={true} />
+              <div className='d-flex'>
               <SocialIcon links={socialLinks} />
+              <WhatsAppChat phoneNumber="+923365563138">
+                <FaWhatsapp />
+              </WhatsAppChat>
+              </div>
             </div>
           </div>
           <div className='col-lg-5'>
-            <img className='w-100 h-100' src={bannerImg} />
+            <img className='w-100 h-100' src={bannerImg} alt='Banner Img' />
           </div>
         </div>
       </div>
