@@ -6,8 +6,8 @@ import UnderConstruction from './layout/underconstruction';
 function App() {
   return (
     <>
-    {/* <Layout /> */}
-    <UnderConstruction />
+    <Layout />
+    {/* <UnderConstruction /> */}
     </>
   );
 }
